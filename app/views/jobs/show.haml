@@ -1,0 +1,18 @@
+%h1 Job offer
+%p
+  Job title:
+  = @job.title
+%p
+  Job description:
+  = @job.description
+%p
+  Job company:
+  = @job.company
+%p
+  Job post link:
+  = @job.url
+
+.btn-group
+  = link_to "Home", root_path, class: "btn btn-default"
+  = link_to "Edit", edit_job_path(@job), class: "btn btn-default"
+  = link_to "Delete", job_path(@job), method: :delete, class: "btn btn-default"
