@@ -1,8 +1,5 @@
-%h1 Elo mordo
 %ul
   - @jobs.each do |job|
     %li
       %h3= link_to job.title, job_path(job)
       %p= job.company
-
-= link_to "Post a job offer", new_job_path

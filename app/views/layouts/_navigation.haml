@@ -1,0 +1,7 @@
+.navbar.navbar-default
+  .navbar-header
+    = link_to "Jobs Board", root_path, class: "navbar-brand"
+  %ul.nav.navbar-nav
+    %li= link_to "Post an offer", new_job_path
+    - Category.all.each do |category|
+      %li= link_to category.name, jobs_path(category: category.name)

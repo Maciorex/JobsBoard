@@ -11,6 +11,9 @@
 %p
   Job post link:
   = @job.url
+%p
+  Category:
+  = @job.category.name
 
 .btn-group
   = link_to "Home", root_path, class: "btn btn-default"
